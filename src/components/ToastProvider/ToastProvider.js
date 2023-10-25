@@ -1,6 +1,7 @@
 import React from "react";
 
 import uuidv4 from "../../utils/uuid";
+import { useEscapeKey } from "../../hooks/useKey";
 
 const INITIAL_TOASTS = [
   {
@@ -33,6 +34,12 @@ function ToastProvider({ children }) {
     },
     [toasts]
   );
+
+  const removeAllToasts = () => {
+    setToasts([]);
+  };
+
+  useEscapeKey(removeAllToasts);
 
   return (
     <ToastContext.Provider value={{ toasts, addToast, removeToast }}>

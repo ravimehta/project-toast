@@ -4,6 +4,7 @@ import Button from "../Button";
 import ToastShelf from "../ToastShelf";
 
 import styles from "./ToastPlayground.module.css";
+import useKey from "../../hooks/useKey";
 
 const VARIANT_OPTIONS = ["notice", "warning", "success", "error"];
 const DEFAULT_VARIANT = VARIANT_OPTIONS[0];
