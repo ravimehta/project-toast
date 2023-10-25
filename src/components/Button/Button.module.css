@@ -13,3 +13,11 @@
   cursor: pointer;
   outline-offset: 4px;
 }
+
+
+/* Styling for a disabled button */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
